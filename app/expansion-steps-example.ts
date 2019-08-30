@@ -9,18 +9,19 @@ import {Component} from '@angular/core';
   styleUrls: ['expansion-steps-example.css'],
 })
 export class ExpansionStepsExample {
-  step = 0;
-
-  setStep(index: number) {
-    this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
+  panels = [
+    {
+    title: 'panel 1',
+    content: ['content 1']
+  },
+  {
+    title: 'panel 2',
+    content: ['content 2', 'other content']
+  },
+  ]
+  otherPanels = {
+    "panel 1":['content 1'],
+    "panel 2":['content 2', 'other content']
   }
 }
 
